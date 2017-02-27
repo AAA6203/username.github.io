@@ -4,7 +4,7 @@
   <title> 'hai' </title>
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'> </script>
 <script>
-        var y = #000000
+        var y = '#000000'
         function changeColour(colour){
           colour=String(colour).slice(1,7);
           colour=parseInt(colour,16);
@@ -17,17 +17,19 @@
           while (color.length < 6){ colour = '0'+colour };
           while (tcolor.length < 6){ tcolour = '0'+tcolour };
           return ['#' + colour,'#'+tcolor];
+          }
         function actuallyChangeColor(){
             storage = changeColor(y)
             y = storage[0]
             b = storage[1]
             document.getElementById('boddy').style.backgroundColor=y
             document.getElementById('boddy').style.color=b
+            }
         document.onload=setInterval(actuallyChangeColor,3)
 </script>
 <style>
   * { border-radius: 3px;
-    font-size:1.5em;
+    font-size:0.5em;
     border:2px solid black;
     }
   .start:hover {
