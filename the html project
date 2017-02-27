@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> 'hai' </title>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'> </script>
+<script>
+        var y = #000000
+        function changeColour(colour){
+          colour=String(colour).slice(1,7);
+          colour=parseInt(colour,16);
+          colour+=1;
+          var tcolour = colour+8388608;
+          if (colour > 16777215) { color = 0};
+          if (tcolour > 16777215) { tcolor -=8388608 };
+          colour = Number(colour).toString(16);
+          tcolour = Number(tcolour).toString(16);
+          while (color.length < 6){ colour = '0'+colour };
+          while (tcolor.length < 6){ tcolour = '0'+tcolour };
+          return ['#' + colour,'#'+tcolor];
+        function actuallyChangeColor(){
+            storage = changeColor(y)
+            y = storage[0]
+            b = storage[1]
+            document.getElementById('boddy').style.backgroundColor=y
+            document.getElementById('boddy').style.color=b
+        document.onload=setInterval(actuallyChangeColor,3)
+</script>
+<style>
+  * { border-radius: 3px;
+    font-size:1.5em;
+    border:2px solid black;
+    }
+  .start:hover {
+    color:'#00CC00';
+    }
+  .hint { color:'#8b8d72' }
+</style>
+</head>
+<body id='boddy'>
+  <h1 class='start'><b>
+    Welcome to my website. </b>
+    </h1>
+  <table>
+  <thead> What would you like to do? </thead>
+  <tbody>
+  <tr>
+    <td> <a href='javascript:clear(this)'> stop the code </a></td>
+    <td> <a href='//www.google.com'> escape </a> </td>
+    <td> <a href='javascript: setInterval(alert,1)'> waste time<span id='hint'><br> hint: do not click</span></a> </td>
+  </tr>
+  </tbody>
+  <!-- hi -->
+  </table>
+</body>
+</html>
