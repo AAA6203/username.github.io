@@ -10,26 +10,26 @@
           colour=parseInt(colour,16);
           colour+=1;
           var tcolour = colour+8388608;
-          if (colour > 16777215) { color = 0};
+          if (colour > 16777215) { colour = 0};
           if (tcolour > 16777215) { tcolor -=8388608 };
           colour = Number(colour).toString(16);
           tcolour = Number(tcolour).toString(16);
-          while (color.length < 6){ colour = '0'+colour };
-          while (tcolor.length < 6){ tcolour = '0'+tcolour };
-          return ['#' + colour,'#'+tcolor];
+          while (colour.length < 6){ colour = '0'+colour };
+          while (tcolour.length < 6){ tcolour = '0'+tcolour };
+          return ['#' + colour,'#'+tcolour];
           }
         function actuallyChangeColor(){
-            storage = changeColor(y)
+            storage = changeColour(y)
             y = storage[0]
             b = storage[1]
             document.getElementById('boddy').style.backgroundColor=y
             document.getElementById('boddy').style.color=b
             }
-        document.onload=setInterval(actuallyChangeColor,3)
+        document.onload=setInterval(actuallyChangeColor,1)
 </script>
 <style>
   * { border-radius: 3px;
-    font-size:0.5em;
+    font-size:1.2em;
     border:2px solid black;
     }
   .start:hover {
