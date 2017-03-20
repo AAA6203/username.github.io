@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> 'hai' </title>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'> </script>
+<script>
+$('.cell').onclick = function(){
+	var data = this.attr('id')
+	if (this.selected){
+		return
+	} else {
+		this.selected = true
+		if ($('option').val() === 'circle'){
+			this.append('<img src="https://banu.com/blog/7/drawing-circles/circle3.png" />')
+		}else {
+			this.append('<img src="http://bookriotcom.c.presscdn.com/wp-content/uploads/2013/07/x.png" />')
+	}}
+	check()
+function check(){
+	var a= $('.a').val()
+	var b = $('.b').val()
+	c=$('.c').val()
+	d=$('.d').val()
+	e=$('.e').val()
+	f=$('.f').val()
+</script>
+<style>
+  td.bab { border-radius: 3px;
+    font-size:1.2em;
+    border:2px solid black;
+    }
+  .start:hover {
+    color:'#00CC00';
+    }
+  .hint { color:'#8b8d72' }
+  .babab {
+	display: none;
+	height:
+</style>
+</head>
+<body id='boddy'>
+  <h1 class='start'><b>
+    Welcome to my website. </b>
+    </h1>
+  <table>
+  <thead> What would you like to do? </thead>
+  <tbody>
+  <tr>
+    <td class='bab'> <a href="javascript:$('.babab').css('display','block'">play something</a></td>
+    <td class='bab'> <a href='//www.google.com'> escape </a> </td>
+    <td class='bab'> <input type="color"><button onclick="javascript:$('body').css('background-color',$('input').val())"> change color? </button>
+  </tr>
+  </tbody>
+  <!-- hi -->
+  </table>
+<br><br><br><br>
+<table class='babab'>
+<tbody>
+	<tr>
+		<td  class='cell' id='a'> </td>
+		<td class='cell'  id='b'> </td>
+		<td class='cell'  id='c'> </td>
+	</tr>
+	<tr>
+		<td  class='cell' id='d'></td>
+		<td  class='cell' id='e'> </td>
+		<td  class='cell' id='f'> </td>
+	</tr>
+	<tr>
+		<td  class='cell' id='g'></td>
+		<td  class='cell' id='h'> </td>
+		<td  class='cell' id='i'> </td>
+	</tr>
+	</tbody>
+</table>
+<option class='babab'>
+	<select value='circle'>Circle</select>
+	<select value='cross'>Cross</select>
+</option>
+</body>
+</html>
